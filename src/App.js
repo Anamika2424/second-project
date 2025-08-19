@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+ function Calculator ()  {
+let operator = "+";
+let a= 10, b=5, result= 0;
+
+function Addition (){
+result = a +b;
+console.log("Addition is : " , result );
+}
+function Substraction(){
+result = a -b;
+console.log("Substraction is : " , result );
+
+}
+function Multiplication (){
+result = a *b;
+console.log("Muliplication is : " , result );
+}
+function Division(){
+result = a /b;
+console.log("Division is : " , result );
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <h2>Calculator</h2>
+    <div>First number is :10</div>
+    <div>Second number is :5</div>
+    
+  <div>  <button onClick={Addition}>Addition</button></div>
+  <div>  <button onClick={Substraction}>Substraction</button></div> 
+   <div> <button onClick={Multiplication}>Muliplication</button></div>
+  <div> <button onClick={Division}>Division</button></div>
+
+
+   </div>
   );
 }
 
-export default App;
+export default Calculator;
