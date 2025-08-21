@@ -1,22 +1,15 @@
 import './App.css';
+import React, { useState } from 'react'
 
 function App() {
-    let array = [2, 4, 6, 7, 8, 9];
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    return (
+    const [age,setAge] = useState();
+function handleAgeChange(event){
+    setAge(event.target.value)
+}
+    return  (
         <div>
-
-            {array.map((singleElement) => {
-                return <div>
-                    {
-                        numbers.map((sequenceOfNumbers) => {
-                            return <span> {singleElement * sequenceOfNumbers}</span>
-                        }
-                        )
-                    }
-                </div>
-            })
-            }
+             <input name="age" value={age} onChange={handleAgeChange}></input>
+            <div>{age}</div>
         </div>
 
     )
