@@ -3,15 +3,15 @@ import React, { useState } from 'react'
 
 
 function App() {
-   const [count ,setCount]=useState(0)
-    function handleIncrease (){
-      setCount(count+1)
-    }   
+  
+  const [student,setStudent]= useState({name:"Anamika" , age:22, gaon:"pimpari pendhar"})
   return (
     <div>
-      <div>{count}</div>
-     <button onClick={handleIncrease}>Increment</button>
-     
+    <p>Name:{student.name}</p>
+    <p>Age:{student.age}</p>
+    <p>Gaon:{student.gaon}</p>
+
+
     </div>
   );
 }
