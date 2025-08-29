@@ -4,14 +4,25 @@ import React, { useState } from 'react'
 
 function App() {
   
-  const [student,setStudent]= useState({name:"Anamika" , age:22, gaon:"pimpari pendhar"})
+  const [student,setStudent]= useState([
+    { id :1,name:"Anamika",age:22,gaon:"Pimpari pendhar"},
+    {id :2,name:"Nikita",age:23,gaon:"Rajuri"},
+    {id:3,  name :"Apeksha" ,age:24,gaon:"Ale"}
+
+  ]);
   return (
     <div>
-    <p>Name:{student.name}</p>
-    <p>Age:{student.age}</p>
-    <p>Gaon:{student.gaon}</p>
+    {student.map((student)=>(
+      <div key={student.id}>
+        <span>{student.id}</span>
+        <span>{student.name}</span>
+        <span >{student.age}</span>
+        <span>{student.gaon}</span>
 
+      </div>
 
+    )
+  )}
     </div>
   );
 }
