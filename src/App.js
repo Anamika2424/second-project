@@ -12,17 +12,29 @@ function App() {
   ]);
   return (
     <div>
+      < table border={1}>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gaon</th>
+          </tr>
+        </thead>
+        <tbody>
     {student.map((student)=>(
-      <div key={student.id}>
-        <span>{student.id}</span>
-        <span>{student.name}</span>
-        <span >{student.age}</span>
-        <span>{student.gaon}</span>
-
-      </div>
+      <tr key={student.id}>
+        <td>{student.id}</td>
+        <td>{student.name}</td>
+        <td >{student.age}</td>
+        <td>{student.gaon}</td>
+      
+      </tr>
 
     )
   )}
+  </tbody>
+  </table>
     </div>
   );
 }
