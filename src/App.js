@@ -1,5 +1,4 @@
 
-
 import './App.css';
 import React, { useState } from 'react';
 
@@ -17,18 +16,15 @@ function App() {
       <table border={1}>
         <thead>
           <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Gaon</th>
+            <td>No</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Gaon</td>
           </tr>
         </thead>
         <tbody>
           {student.map((student) => (
-            <tr 
-              key={student.no} 
-              style={ student.age > 50 ? { backgroundColor: "black", color: "white" } : {} }
-            >
+            <tr key={student.no} className={student.age > 50 ? "highlight" : ""}>
               <td>{student.no}</td>
               <td>{student.name}</td>
               <td>{student.age}</td>
